@@ -58,12 +58,17 @@ body {
 .table__inputEle--disabled {
   background-color: #eee;
   border: 1px solid #eee;
+  pointer-events: none;
 }
 
 .table__inputEle:focus {
   background-color: #fff;
   outline: transparent;
   border: 1px solid #aaa;
+}
+
+.table__inputEle:hover {
+  background-color: #d4e8f7;
 }
 
 .table__selectEle {

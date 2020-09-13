@@ -5,7 +5,7 @@ import TableView from "../../components/TableView/TableView";
 
 class Table extends Component {
   state = {
-    sendFormResult: "",
+    sendFormResult: false,
     everyInputComplete: false,
   };
   componentDidMount() {
@@ -20,7 +20,7 @@ class Table extends Component {
     const everyInput = document.querySelectorAll(".table__inputEle");
     const everyInputArr = [...everyInput];
 
-    this.setState({ sendFormResult: "Form has been sent successfully" });
+    this.sendMessageFunc();
     everyInputArr.forEach((ele) => (ele.value = ""));
     sendMessage.classList.add("sendResult--success");
   };
@@ -60,6 +60,13 @@ class Table extends Component {
     }
   };
 
+  sendMessageFunc = () => {
+    this.setState({ sendFormResult: !this.state.sendFormResult });
+    setTimeout(() => {
+      this.setState({ sendFormResult: !this.state.sendFormResult });
+    }, 3000);
+  };
+
   render() {
     const { sendFormResult, everyInputComplete } = this.state;
     return (
@@ -77,7 +84,9 @@ class Table extends Component {
           disabled={everyInputComplete ? false : true}
         />
 
-        <h2 className="sendResult">{sendFormResult}</h2>
+        <h2 className="sendResult">
+          {sendFormResult ? "Form has been sent successfully" : null}
+        </h2>
       </div>
     );
   }
