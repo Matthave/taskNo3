@@ -1,7 +1,7 @@
 import React from "react";
 import Table from "../../containers/Table/Table";
 
-function TableView() {
+function TableView({ vatInputChange }) {
   return (
     <table className="table">
       <thead>
@@ -25,10 +25,18 @@ function TableView() {
             <input className="table__inputEle" />
           </th>
           <th className="table__bodyEle">
-            <input className="table__inputEle" />
+            <select
+              className="table__inputEle table__selectEle"
+              onChange={(e) => vatInputChange(e)}
+            >
+              <option value="0" defaultValue></option>
+              <option value="8">8%</option>
+              <option value="23">23%</option>
+              <option value="32">32%</option>
+            </select>
           </th>
           <th className="table__bodyEle">
-            <input className="table__inputEle" />
+            <input className="table__inputEle" disabled />
           </th>
         </tr>
       </tbody>
