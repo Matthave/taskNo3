@@ -30,6 +30,7 @@ body {
 
 .table {
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .table__headEle {
@@ -48,16 +49,46 @@ body {
 .addBtn {
   width: 150px;
   height: 30px;
-  background-color: #61bd4f;
   border-radius: 3px;
-  margin: 20px auto;
+  margin: 5px auto;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   cursor: pointer;
   color: #fff;
+  background-color: #61bd4f;
 }
 
 .addBtn:hover {
   background-color: #81dd6f;
+}
+
+.sendBtn {
+  width: 150px;
+  height: 30px;
+  border-radius: 3px;
+  margin: 5px auto;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+  color: #fff;
+  background-color: #1275c0;
+}
+
+.sendBtn:hover {
+  background-color: #3295e0;
+}
+
+.sendResult {
+  width: 75%;
+  margin: 25px auto;
+  text-align: center;
+}
+
+.sendResult--success {
+  color: #61bd4f;
+}
+
+.sendResult--fail {
+  color: #cf513d;
 }
 /*# sourceMappingURL=style.css.map */

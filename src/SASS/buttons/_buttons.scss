@@ -1,0 +1,17 @@
+.addBtn {
+  @include btn;
+  background-color: #61bd4f;
+
+  &:hover {
+    background-color: #81dd6f;
+  }
+}
+
+.sendBtn {
+  @include btn;
+  background-color: #1275c0;
+
+  &:hover {
+    background-color: #3295e0;
+  }
+}
