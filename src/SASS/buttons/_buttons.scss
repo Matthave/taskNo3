@@ -11,6 +11,12 @@
   @include btn;
   background-color: #1275c0;
 
+  &--disabled {
+    background-color: #bbb;
+    cursor: initial;
+    pointer-events: none;
+  }
+
   &:hover {
     background-color: #3295e0;
   }

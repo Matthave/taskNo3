@@ -3,8 +3,13 @@
   margin-bottom: 20px;
 
   &__headEle {
-    border-bottom: 1px solid black;
     padding: 5px;
     font-size: 1.3rem;
+    background-color: #1275c0;
+    color: white;
+
+    &:nth-last-child(1) {
+      border-right: none;
+    }
   }
 }

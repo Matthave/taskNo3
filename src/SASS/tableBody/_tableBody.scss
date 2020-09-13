@@ -1,15 +1,28 @@
 .table__inputEle {
   width: 100%;
-  border-radius: 0;
-  border: 1px solid black;
+  border-radius: 3px;
+  background-color: #ddeefb;
+  border: 1px solid #ddeefb;
   text-align: center;
   padding: 4px;
+  transition: 0.2s;
+
+  &--disabled {
+    background-color: #eee;
+    border: 1px solid #eee;
+  }
+
+  &:focus {
+    background-color: #fff;
+    outline: transparent;
+    border: 1px solid #aaa;
+  }
 }
 
 .table__selectEle {
-  width: 60px;
-  border-radius: 0;
-  border: 1px solid black;
+  width: 100%;
+  min-width: 60px;
+  border-radius: 3px;
   padding: 4px;
   font-size: 1.3rem;
 }
