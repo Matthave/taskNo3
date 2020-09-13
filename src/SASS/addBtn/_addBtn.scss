@@ -1,0 +1,14 @@
+.addBtn {
+  width: 150px;
+  height: 30px;
+  background-color: #61bd4f;
+  border-radius: 3px;
+  margin: 20px auto;
+  transition: 0.2s;
+  cursor: pointer;
+  color: #fff;
+
+  &:hover {
+    background-color: #81dd6f;
+  }
+}

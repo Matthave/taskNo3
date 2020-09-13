@@ -1,0 +1,9 @@
+.table {
+  width: 100%;
+
+  &__headEle {
+    border-bottom: 1px solid black;
+    padding: 5px;
+    font-size: 1.3rem;
+  }
+}
