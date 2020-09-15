@@ -67,10 +67,6 @@ body {
   border: 1px solid #aaa;
 }
 
-.table__inputEle:hover {
-  background-color: #d4e8f7;
-}
-
 .table__selectEle {
   width: 100%;
   min-width: 60px;
@@ -86,6 +82,7 @@ body {
   margin: 5px auto;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  outline: transparent;
   cursor: pointer;
   color: #fff;
   background-color: #61bd4f;
@@ -102,6 +99,7 @@ body {
   margin: 5px auto;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  outline: transparent;
   cursor: pointer;
   color: #fff;
   background-color: #1275c0;

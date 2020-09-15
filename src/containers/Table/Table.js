@@ -26,26 +26,27 @@ class Table extends Component {
   };
 
   vatInputChange = (e, changeFromEle) => {
+    const target = e.target;
     const thisTrNettoPrice =
-      e.target.parentNode.parentNode.children[2].children[0].value;
+      target.parentNode.parentNode.children[2].children[0].value;
     if (changeFromEle === "vatElement") {
-      e.target.parentNode.parentNode.children[4].children[0].value =
-        Number(thisTrNettoPrice) + (e.target.value / 100) * thisTrNettoPrice;
+      target.parentNode.parentNode.children[4].children[0].value =
+        Number(thisTrNettoPrice) + (target.value / 100) * thisTrNettoPrice;
     } else {
       const thisTrNettoPrice = e.target.value;
       const thisTrVAT =
-        e.target.parentNode.parentNode.children[3].children[0].value;
+        target.parentNode.parentNode.children[3].children[0].value;
 
-      e.target.parentNode.parentNode.children[4].children[0].value =
+      target.parentNode.parentNode.children[4].children[0].value =
         Number(thisTrNettoPrice) + (thisTrVAT / 100) * thisTrNettoPrice;
     }
 
     if (
-      e.target.parentNode.parentNode.children[4].children[0].value === "0" ||
-      e.target.parentNode.parentNode.children[4].children[0].value ===
+      target.parentNode.parentNode.children[4].children[0].value === "0" ||
+      target.parentNode.parentNode.children[4].children[0].value ===
         thisTrNettoPrice
     ) {
-      e.target.parentNode.parentNode.children[4].children[0].value = "";
+      target.parentNode.parentNode.children[4].children[0].value = "";
     }
     this.isEveryInputCompleteFunc();
   };
@@ -61,7 +62,10 @@ class Table extends Component {
   };
 
   sendMessageFunc = () => {
-    this.setState({ sendFormResult: !this.state.sendFormResult });
+    this.setState({
+      sendFormResult: !this.state.sendFormResult,
+      everyInputComplete: false,
+    });
     setTimeout(() => {
       this.setState({ sendFormResult: !this.state.sendFormResult });
     }, 3000);
