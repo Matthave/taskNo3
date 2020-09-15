@@ -1,7 +1,7 @@
 # Technologies that have been used:
 React,
 Java Script,
-CSS under SASS/SCSS control,
+CSS under SASS/SCSS control (I left folder inside repo )
 
 ## Download Repo
 If you want to download my project,
