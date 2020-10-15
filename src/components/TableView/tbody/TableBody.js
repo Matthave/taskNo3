@@ -25,6 +25,7 @@ function TableBody({ vatInputChange }) {
             <option value="8">8%</option>
             <option value="23">23%</option>
             <option value="32">32%</option>
+            {console.log('Eloszka')}
           </select>
         </th>
         <th className="table__bodyEle">
